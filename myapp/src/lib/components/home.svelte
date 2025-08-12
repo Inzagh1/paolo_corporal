@@ -22,8 +22,8 @@
 	});
 </script>
 
-<div
-	class="rounded-4xl border-3 relative h-full w-full border-white bg-[url('/images/bg.png')] bg-cover bg-center"
+<div 
+	class="rounded-4xl border-3  relative h-full w-full border-white bg-[url('/images/bg.png')] bg-cover bg-center"
 >
 	<img src="/images/pao.png" alt="picOFme" class="glitch-img h-full" />
 
@@ -46,7 +46,7 @@
 		class="border-l-3 border-t-3 absolute -bottom-1 -right-1 h-1/3 w-[60%] rounded-3xl rounded-bl-none rounded-tr-none border-white bg-[#212121] pl-3 pt-3"
 	>
 		<div
-			class="rounded-br-4xl border-3 flex h-full w-full items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
+			class="rounded-br-4xl border-3 shadow-lg shadow-purple-800/50 flex h-full w-full items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
 		>
 			<!-- Glitch effect text -->
 			<span
@@ -142,74 +142,5 @@
 		}
 	}
 
-	.glitch-text {
-		position: relative;
-		display: inline-block;
-		color: white; /* Base stays white */
-	}
-
-	.glitch-text::before,
-	.glitch-text::after {
-		content: attr(data-text);
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		opacity: 0;
-		pointer-events: none;
-	}
-
-	.glitch-text::before {
-		color: rgba(255, 0, 157, 0.85);
-		clip-path: inset(0 0 50% 0);
-		animation: glitch-before 1.5s infinite;
-	}
-
-	.glitch-text::after {
-		color: rgba(0, 150, 255, 0.9);
-		clip-path: inset(50% 0 0 0);
-		animation: glitch-after 1.5s infinite;
-	}
-
-	@keyframes glitch-before {
-		0%,
-		90%,
-		100% {
-			transform: none;
-			opacity: 0;
-		}
-		92% {
-			transform: translate(-3px, -2px) skewX(-5deg);
-			opacity: 1;
-		}
-		94% {
-			transform: translate(3px, 2px) skewX(3deg);
-			opacity: 1;
-		}
-		96% {
-			transform: translate(-2px, -1px) skewX(-2deg);
-			opacity: 1;
-		}
-	}
-
-	@keyframes glitch-after {
-		0%,
-		90%,
-		100% {
-			transform: none;
-			opacity: 0;
-		}
-		92% {
-			transform: translate(3px, 2px) skewX(5deg);
-			opacity: 1;
-		}
-		94% {
-			transform: translate(-3px, -2px) skewX(-3deg);
-			opacity: 1;
-		}
-		96% {
-			transform: translate(2px, 1px) skewX(2deg);
-			opacity: 1;
-		}
-	}
+	
 </style>
