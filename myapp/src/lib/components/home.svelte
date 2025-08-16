@@ -46,7 +46,7 @@
 		class="border-l-3 border-t-3 absolute -bottom-1 -right-1 h-1/3 w-[60%] rounded-3xl rounded-bl-none rounded-tr-none border-white bg-[#212121] pl-3 pt-3"
 	>
 		<div
-			class="rounded-br-4xl border-3 shadow-lg shadow-purple-800/50 flex h-full w-full items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
+			class="rounded-br-4xl border-3  animate-pulse shadow-lg shadow-purple-800/50 flex h-full w-full items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
 		>
 			<!-- Glitch effect text -->
 			<span

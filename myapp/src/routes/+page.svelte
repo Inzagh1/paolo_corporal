@@ -3,19 +3,21 @@
 	import Skills from '$lib/components/skills.svelte';
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import Designs from '$lib/components/designs.svelte';
+	
 
 	// Smooth scroll function
 	const scrollToSection = (id) => {
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 	};
 
-    let showHome = false;
+	let showHome = false;
 
-onMount(() => {
-    setTimeout(() => {
-        showHome = true;
-    }, 10); // small delay to trigger fade
-});
+	onMount(() => {
+		setTimeout(() => {
+			showHome = true;
+		}, 10); // small delay to trigger fade
+	});
 </script>
 
 <main class="flex h-auto bg-[#212121] text-white">
@@ -25,7 +27,7 @@ onMount(() => {
 	>
 		<!-- Logo -->
 		<div class="mt-10 flex justify-center p-4 md:mt-0">
-			<img src="/images/logo.png" alt="Logo" class="h-24" />
+			<img src="/images/logo.png" alt="Logo" class="h-24 animate-pulse" />
 		</div>
 
 		<!-- Nav buttons -->
@@ -60,26 +62,26 @@ onMount(() => {
 
 	<!-- Page sections -->
 	<div class="flex-1">
-     
-		<section
-			id="home"
-			class="relative flex h-screen items-center justify-center p-5 pl-0"
-
-		>
-           {#if showHome}
-        <div class="h-screen w-full p-10" in:fade={{ duration: 800 }}>
-            <Home />
-        </div>
-        {/if}
+		<section id="home" class="relative flex h-screen items-center justify-center p-5 pl-0">
+			{#if showHome}
+				<div class="h-screen w-full p-10" in:fade={{ duration: 800 }}>
+					<Home />
+				</div>
+			{/if}
 		</section>
-		
 
 		<section id="skills" class="flex h-screen items-center justify-center">
+			
 			<Skills />
 		</section>
 
-		<section id="works" class="flex h-screen items-center justify-center">
-			<h1 class="text-4xl">Sample Projects</h1>
-		</section>
+		<section id="works" class="relative flex h-screen overflow-hidden">
+
+			<!-- Content -->
+			<div class="relative flex w-full">
+			  <Designs />
+			</div>
+		  </section>
+		  
 	</div>
 </main>

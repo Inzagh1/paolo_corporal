@@ -53,11 +53,12 @@
 </script>
 
 <div class="justify-content-center relative m-10 h-full w-full">
+	
     {#if visible}
 	<div in:fly={{ x: 100, duration: 1000 }}	bind:this={container} class="justify-content-center flex justify-between pb-10 pt-10">
 		<div>
 			<span
-				class="glitch-text stalinist-one-regular top-5 text-5xl text-white"
+				class="text-shadow-[#FB09FF] text-shadow-lg stalinist-one-regular top-5 text-5xl text-white"
 				data-text="SKILLS & TOOLS">SKILLS & TOOLS</span
 			>
 		</div>
