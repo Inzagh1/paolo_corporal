@@ -102,7 +102,14 @@
 	  </div>
 	</div>
 	{/if}
-	<div class="md:absolute mt-10 bottom-16 right-10 h-1 w-full md:w-1/2 bg-white"> </div>
+	<div class="md:absolute mt-10 bottom-16 right-10 h-1 w-full md:w-1/2 
+    bg-white 
+    drop-shadow-[0_0_15px_#00faff] 
+    drop-shadow-[0_0_30px_#00faff] 
+    drop-shadow-[0_0_60px_#00faff] 
+    rounded-full">
+</div>
+
   </div>
   
   <style>

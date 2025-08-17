@@ -72,7 +72,7 @@
 			{/if}
 		</section>
 
-		<section id="skills" class="flex h-auto items-center justify-center">
+		<section id="skills" class="flex h-auto items-center md:pl-10 md:pr-10 justify-center">
 			<Skills />
 		</section>
 
