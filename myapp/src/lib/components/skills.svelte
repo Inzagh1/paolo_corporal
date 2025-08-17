@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import Skill from './Skill.svelte';
+	import Skill from "./skill.svelte";
+
 	import { fly, fade } from 'svelte/transition';
   
 	const colors = ['#9747FF', 'gray', '#5E0552'];
