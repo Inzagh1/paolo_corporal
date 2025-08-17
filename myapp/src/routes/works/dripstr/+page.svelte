@@ -33,7 +33,6 @@
     <!-- Centered Content -->
     <div class="flex flex-col md:flex-row gap-10 w-full mt-10 md:mt-0 max-w-7xl items-center justify-center">
   
-      <!-- Left Column: Text + Featured Image -->
       <div class="md:w-1/2 w-full  flex flex-col justify-center space-y-6 text-center md:text-start md:p-10">
         <h1 class="mb-6 stalinist-one-regular text-xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 animate-text-fade" in:fade>
             DRIPSTR E-commerce Platform
@@ -44,7 +43,6 @@
   
       </div>
   
-      <!-- Right Column: Futuristic Photo Gallery -->
       <div class="md:w-1/2 grid grid-cols-2 gap-4">
         {#each galleryImages as img, i}
           <div 
