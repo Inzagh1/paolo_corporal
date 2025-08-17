@@ -23,18 +23,18 @@
 </script>
 
 <div 
-	class="rounded-4xl border-3  relative h-full w-full border-white bg-[url('/images/bg.png')] bg-cover bg-center"
+	class="rounded-4xl border-3 md:mt-0 mt-5  relative md:h-full w-full border-white bg-[url('/images/bg.png')] bg-cover bg-center"
 >
-	<img src="/images/pao.png" alt="picOFme" class="glitch-img h-full" />
+	<img src="/images/pao.png" alt="picOFme" class="glitch-img h-[20%] md:h-full" />
 
 	<!--PAO-->
 	<div
-		class="rounded-b-4xl border-b-3 border-l-3 border-r-3 absolute left-1/2 top-0 -mt-1 flex h-[15%] w-[30%] -translate-x-1/2 items-center justify-center rounded-tr-none border-white bg-[#212121]"
+		class="rounded-b-4xl border-b-3 border-l-3 border-r-3 absolute left-1/2 top-0 -mt-1 flex h-[15%] w-[40%] md:w-[30%] -translate-x-1/2 items-center justify-center rounded-tr-none border-white bg-gradient-to-br from-black via-[#0a0a12] to-[#11101a]"
 	>
-		<span class="glitch-text stalinist-one-regular text-5xl text-white" data-text="PAO">PAO</span>
+		<span class="glitch-text stalinist-one-regular text-2xl md:text-5xl text-white" data-text="PAO">PAO</span>
 	</div>
 
-	<div class="absolute border-white border-2 h-[60%] w-[30%] bg-black/60 top-5 right-5 p-5 rounded-xl rounded-b-[15%] overflow-hidden flex items-center justify-center">
+	<div class="absolute md:flex hidden border-white border-2 h-[60%] w-[30%] bg-black/60 top-5 right-5 p-5 rounded-xl rounded-b-[15%] overflow-hidden flex items-center justify-center">
         <span class="monomaniac-one-regular text-white text-[clamp(0.8rem,1.5vw,1.2rem)] leading-snug text-center">
             "UI/UX Designer and Frontend Developer focused on creating intuitive, visually appealing, and responsive digital experiences. I blend creativity with technical expertise to craft interfaces that enhance user satisfaction."
         </span>
@@ -43,14 +43,14 @@
 
 	<!--TEXT TITLE-->
 	<div
-		class="border-l-3 border-t-3 absolute -bottom-1 -right-1 h-1/3 w-[60%] rounded-3xl rounded-bl-none rounded-tr-none border-white bg-[#212121] pl-3 pt-3"
+		class="border-l-3 border-t-3 absolute -bottom-1 -right-1 h-[20%] md:h-1/3 w-[60%] rounded-3xl rounded-bl-none rounded-tr-none border-white bg-gradient-to-br from-black via-[#0a0a12] to-[#11101a] md:pl-3 md:pt-3 pl-2 pt-2"
 	>
 		<div
-			class="rounded-br-4xl border-3  animate-pulse shadow-lg shadow-purple-800/50 flex h-full w-full items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
+			class="rounded-br-4xl border-3  animate-pulse shadow-lg shadow-purple-800/50 flex h-full w-full text-center items-center justify-center rounded-tl-xl border-white bg-gradient-to-r from-[#212121] via-purple-500/50 to-pink-500/50 px-4"
 		>
 			<!-- Glitch effect text -->
 			<span
-				class="stalinist-one-regular relative inline-block text-3xl font-bold text-white"
+				class="stalinist-one-regular relative inline-block md:text-3xl font-bold text-white"
 				data-text={currentTitle}
 				class:glitch={isGlitch}
 			>
@@ -58,6 +58,11 @@
 			</span>
 		</div>
 	</div>
+</div>
+<div class="flex md:hidden border-white border-2 h-auto md:h-[60%] w-full md:w-[30%] bg-black/60 mt-2 p-5 rounded-xl rounded-b-[15%] overflow-hidden flex items-center justify-center">
+	<span class="monomaniac-one-regular text-white text-[clamp(0.8rem,1.5vw,1.2rem)] leading-snug text-center">
+		"UI/UX Designer and Frontend Developer focused on creating intuitive, visually appealing, and responsive digital experiences. I blend creativity with technical expertise to craft interfaces that enhance user satisfaction."
+	</span>
 </div>
 
 <style>

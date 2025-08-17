@@ -4,7 +4,6 @@
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Designs from '$lib/components/designs.svelte';
-	
 
 	// Smooth scroll function
 	const scrollToSection = (id) => {
@@ -20,20 +19,23 @@
 	});
 </script>
 
-<main class="flex h-auto bg-[#212121] text-white">
+<main class="h-auto bg-gradient-to-br from-black via-[#0a0a12] to-[#11101a] text-white md:flex">
 	<!-- Sticky navbar (left side) -->
 	<aside
 		class="md:w-1/8 flex h-auto w-full flex-shrink-0 flex-col items-center justify-center md:sticky md:top-0 md:h-screen"
 	>
 		<!-- Logo -->
-		<div class="mt-10 flex justify-center p-4 md:mt-0">
-			<img src="/images/logo.png" alt="Logo" class="h-24 animate-pulse" />
+		<div class="mt-2 flex justify-center p-2 md:mt-10 md:p-4">
+			<img src="/images/logo.png" alt="Logo" class="h-16 animate-pulse md:h-24" />
 		</div>
 
 		<!-- Nav buttons -->
-		<div class="p-10">
+		<div class="hidden p-10 md:flex">
 			<div
-				class="border-3 rounded-4xl flex justify-around gap-16 border-white bg-gray-300/30 p-7 text-2xl text-white md:flex-col md:items-center"
+				class="rounded-4xl before:rounded-4xl animate-bg-fade relative flex justify-around gap-16 border border-white/100 bg-black/30
+					 p-7 text-2xl text-white
+				
+					 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-r before:from-purple-500 before:via-blue-400 before:to-pink-500 before:opacity-30 before:blur-xl md:flex-col md:items-center"
 			>
 				<button
 					on:click={() => scrollToSection('home')}
@@ -62,26 +64,38 @@
 
 	<!-- Page sections -->
 	<div class="flex-1">
-		<section id="home" class="relative flex h-screen items-center justify-center p-5 pl-0">
+		<section id="home" class="relative flex h-screen items-center justify-center pl-0 md:p-5">
 			{#if showHome}
-				<div class="h-screen w-full p-10" in:fade={{ duration: 800 }}>
+				<div class="h-screen w-full p-4 pt-0 md:p-10" in:fade={{ duration: 800 }}>
 					<Home />
 				</div>
 			{/if}
 		</section>
 
-		<section id="skills" class="flex h-screen items-center justify-center">
-			
+		<section id="skills" class="flex h-auto items-center justify-center">
 			<Skills />
 		</section>
 
-		<section id="works" class="relative flex h-screen overflow-hidden">
-
-			<!-- Content -->
+		<section id="works" class="relative flex h-auto overflow-hidden">
 			<div class="relative flex w-full">
-			  <Designs />
+				<Designs />
 			</div>
-		  </section>
-		  
+		</section>
 	</div>
 </main>
+
+<style>
+	@keyframes bg-fade {
+		0%,
+		100% {
+			background-position: 0% 10%;
+		}
+		50% {
+			background-position: 10% 50%;
+		}
+	}
+	.animate-bg-fade {
+		background-size: 10% 10%;
+		animation: bg-fade 8s ease infinite;
+	}
+</style>

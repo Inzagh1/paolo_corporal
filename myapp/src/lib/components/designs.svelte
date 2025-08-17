@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
     import { goto } from '$app/navigation';
+
 	let current = 0;
 	let interval;
 
@@ -10,7 +11,7 @@
 			title: 'KOFFITOP Inventory System',
 			desc: ' KOFFITOP Inventory System is a management tool designed for milk tea shops to track stock levels, monitor ingredient usage, and automate restocking for efficient daily operations.',
 			img: '/images/KOFFITOP.png',
-            link: '/works/koffitop.svelte' 
+            link: '/works/koffitop' 
 		},
 		{
 			title: 'FLAREPOLE Emergency Response System',
@@ -19,7 +20,7 @@
             link: '/works/flarepole' 
 		},
 		{
-			title: 'JANEILANYARD Lanyard Editing System',
+			title: 'JANEILANYARD Editing System',
 			desc: 'JANEILANYARD is a web-based system that combines lanyard editing software with inventory management system, making design and stock tracking easy and efficient.',
 			img: '/images/Janei.png',
             link: '/works/janei' 
@@ -56,24 +57,24 @@
 <div class="h-full w-full">
 	<!-- Slider -->
 	<div
-		class="relative mt-5 w-full p-10"
+		class="relative mt-5 w-full p-5 md:p-10"
 		on:mouseenter={stopAutoSlide}
 		on:mouseleave={startAutoSlide}
 	>
-		<div class="flex gap-10">
+		<div class="md:flex gap-10">
 			<!-- Left text -->
-			<div class="w-1/2 items-center justify-center p-10">
+			<div class="w-full md:w-1/2 items-center text-center md:text-start justify-center md:p-10">
 				<div>
 					<span
-						class="text-shadow-[#FB09FF] text-shadow-lg stalinist-one-regular top-5 text-5xl text-white"
+						class="text-shadow-[#FB09FF] text-shadow-lg stalinist-one-regular top-5 text-3xl sm:text-4xl md:text-5xl text-white"
 						>DESIGNS</span
 					>
 				</div>
 
 				{#key current}
-					<div class="mt-10 space-y-5 pt-10">
+					<div class="mt-2 md:mt-10 space-y-5 pt-10">
 						<h2
-							class="monomaniac-one-regular text-[clamp(0.8rem,1.5vw,1.2rem)] leading-snug text-white drop-shadow-[0_0_10px_#FB09FF]"
+							class="monomaniac-one-regular md:text-[clamp(0.8rem,1.5vw,1.2rem)] leading-snug text-white drop-shadow-[0_0_10px_#FB09FF]"
 							in:fade={{ duration: 600 }} 
 						>
 							{slides[current].title}
@@ -85,11 +86,11 @@
 						>
 							{slides[current].desc}
 						</p>
-                        <div class="mt-10">
+                        <div class="mt-5 md:mt-10">
                             <button
                             on:click={() => goto(slides[current].link)}
                             in:fade={{ duration: 600 }}
-                                class="mt-6 rounded-lg border border-purple-400/70 bg-gradient-to-r from-purple-800/30
+                                class="mt-6 rounded-lg border cursor-pointer border-purple-400/70 bg-gradient-to-r from-purple-800/30
                        via-black to-blue-800/30
                        px-6 py-2 font-semibold text-white
                        shadow-[0_0_15px_rgba(139,92,246,0.6)]
@@ -106,7 +107,7 @@
 			</div>
 
 			<!-- Right card stack -->
-			<div class="flex w-1/2 flex-col items-center gap-4">
+			<div class="flex w-full mt-10 md:mt-0 md:w-1/2 flex-col items-center gap-2 md:gap-4">
 				<!-- Big active image -->
 				{#key current}
 					<div
@@ -131,7 +132,7 @@
 						<div
 							class="transform cursor-pointer rounded-lg border
                        border-purple-400/30 bg-gradient-to-br
-                       from-purple-800 via-black to-blue-900 p-2
+                       from-purple-800 via-black to-blue-900 p-1 md:p-2
                        shadow-[0_0_15px_rgba(139,92,246,0.6)] transition-all duration-300 hover:rotate-1
                        hover:scale-110"
 							on:click={() => (current = i)}
